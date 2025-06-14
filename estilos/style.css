@@ -1,9 +1,28 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
+
+@font-face{
+    font-family: 'Fonte-titulo';
+    src: url(../fonts/Homemade.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 *{
     margin: 0px;
     padding: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--conteudo);
+}
+
+:root{
+    --titulo: 'Fonte-titulo', serif;
+    --conteudo: 'Edu NSW ACT Cursive', serif;
+    --cor0: #F0C383;
+    --cor1: #CC8A33;
+    --cor2: #A36E29;
+    --cor3: #7A531F;
+    --cor4: #523714;
 }
 
 html, body{
@@ -15,17 +34,28 @@ html, body{
 
 header{
     position: relative;
-    background-color: yellowgreen;
+    background: black url(../imagens/Fundo-madeira.jpg) top center no-repeat scroll;
+    background-size: cover;
     width: 100vw;
     height: 200px;
+    border-bottom: 1px solid black;
+    box-shadow: 0px 2px 5px rgb(0, 0, 0);
+
 }
 
 header > h1{
+    font-family: var(--titulo);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 8vw;
+    font-size: 7.8vw;
+    color: white;
+    background-image: linear-gradient(to bottom, var(--cor4), var(--cor3), var(--cor2));
+    padding: 16px;
+    border-radius: 50%;
+    border: 1px solid black;
+    text-shadow: 2px 2px 0px black;
 }
 
 /*Títulos*/
@@ -37,14 +67,18 @@ section#titulo{
 }
 
 section#titulo h2{
+    font-family: var(--titulo);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.347);
+    background-color: var(--cor0);
+    color: var(--cor4);
     border-radius: 50%;
-    padding: 10px;
-    font-size: 5vw;
+    padding: 25px;
+    font-size: 10vw;
+    border: 1px solid var(--cor4);
+    text-shadow: 2px 2px 1px black;
 }
 
 /*Receita 1 e Receita 2*/
@@ -52,17 +86,19 @@ section#titulo h2{
 section#receita1, section#receita2{
     background-color: gray;
     width: 100vw;
-    height: 900px;
+    height: 100%;
+    padding-bottom: 30px;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.586);
 }
 
 section#receita1 img, section#receita2 img{
-    background-color: red;
+    background-color: var(--cor1);
     display: block;
     margin: auto;
     transform: translate(0%, 40px);
     margin-bottom: 40px;
     width: 300px;
-    height: 300px;
+    height: 350px;
     padding: 5px;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.701);
@@ -71,7 +107,8 @@ section#receita1 img, section#receita2 img{
 div#ingredientes{
     background-color: white;
     margin: auto;
-    transform: translate(0%, 20%);
+    margin-top: 100px;
+    transform: translate(0%, 0%);
     width: 88vw;
     padding: 10px;
     border-radius: 10px;
@@ -79,20 +116,22 @@ div#ingredientes{
 }
 
 div#ingredientes h3 {
+    font-family: var(--titulo);
     margin: 10px;
-    font-size: 1.4em;
+    font-size: 2em;
 }
 
 div#ingredientes p{
     margin: 20px;
     line-height: 26px;
-    font-size: 1.1em;
-    text-indent: 20px;
+    font-size: 1.2em;
+    text-indent: 25px;
 }
 
 div#ingredientes ul{
-    margin-left: 40px;
+    list-style-position: inside;
     font-size: 1.1em;
+    columns: 1;
 }
 
 div#ingredientes li{
@@ -108,28 +147,30 @@ section#passo-a-passo{
 }
 
 div#passo-a-passo{
-    background-color: green;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.701);
+    background-color: lightgray;
+    box-shadow: 1px 1px 5px rgb(0, 0, 0);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
-    height: 500px;
     max-width: 500px;
-    min-width: 100px;
+    min-width: 300px;
 }
 
 div#passo-a-passo h3{
-    text-align: center;
-    margin: 20px 0px;
-    width: 300px;
+    font-family: var(--titulo);
+    color: black;
+    text-align: left;
+    margin: 20px 10px;
+    font-size: 2.5em;
 }
 
 div#passo-a-passo ol{
-    margin-left: 30px;
+    list-style-position: inside;
 }
 
 div#passo-a-passo li{
     margin: 10px;
+    font-size: 1.2em;
 }
