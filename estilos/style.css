@@ -76,7 +76,9 @@ section#titulo h2{
     color: var(--cor4);
     border-radius: 50%;
     padding: 25px;
-    font-size: 10vw;
+    font-size: 9vw;
+    min-width: 150px;
+    max-width: 350px;
     border: 1px solid var(--cor4);
     text-shadow: 2px 2px 1px black;
 }
@@ -97,8 +99,6 @@ section#receita1 img, section#receita2 img{
     margin: auto;
     transform: translate(0%, 40px);
     margin-bottom: 40px;
-    width: 300px;
-    height: 350px;
     padding: 5px;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.701);
