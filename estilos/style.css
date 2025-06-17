@@ -96,7 +96,6 @@ h2#chocolate{
 section#receita1, section#receita2{
     background-color: gray;
     width: 100vw;
-    height: 100%;
     padding-bottom: 30px;
     box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.586);
 }
@@ -185,7 +184,7 @@ div#passo-a-passo li{
 
 /*Telas entre 768px e 1024px*/
 
-@media (min-width: 768px) and (max-width:1024px){
+@media screen and (min-width: 768px) and (max-width:1024px){
     
     /*Cabeçalho*/
 
@@ -215,7 +214,7 @@ div#passo-a-passo li{
 
     section#receita1, section#receita2{
         position: relative;
-        height: 640px;
+        height: 610px;
         padding-bottom: 0px;
     }
 
@@ -273,7 +272,59 @@ div#passo-a-passo li{
 
     /*Imagens*/
 
-    img.mudar{
+    section#receita2 img.mudar{
+        position: absolute;
+        top: 50%;
+        right: 2%;
+        transform: translate(0%, -50%);
+        margin-bottom: 0px;
+    }
+
+    section#receita2 div.mudar{
+        position: absolute;
+        margin-top: 0px;
+        top: 50%;
+        left: 5vw;
+        transform: translate(0%, -50%);
+        width: 350px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    
+    /*Cabeçalho*/
+
+    header > h1{
+        font-size: 6vw;
+        padding: 18px;
+    }
+
+    /*Títulos*/
+
+    section#titulo h2{
+        padding: 30px;
+        font-size: 4vw;
+        min-width: 150px;
+        max-width: 350px;
+    }
+
+    h2#banana{
+    font-size: 7.9vw;
+    }
+
+    h2#chocolate{
+        font-size: 8vw;
+    }
+
+    /*Receita 1 e Receita 2*/
+
+    section#receita1, section#receita2{
+        position: relative;
+        height: 650px;
+        padding-bottom: 0px;
+    }
+
+    section#receita1 img.deixar, section#receita2 img.deixar{
         position: absolute;
         top: 50%;
         left: 2%;
@@ -281,12 +332,66 @@ div#passo-a-passo li{
         margin-bottom: 0px;
     }
 
-    div.mudar{
+    div#ingredientes.deixar{
         position: absolute;
         margin-top: 0px;
         top: 50%;
         right: 5vw;
         transform: translate(0%, -50%);
-        width: 350px;
+        width: 41vw;
+    }
+
+    div#ingredientes h3 {
+        font-size: 2.5em;
+    }
+
+    div#ingredientes p{
+        margin: 20px;
+        line-height: 26px;
+        font-size: 1.1em;
+        text-indent: 25px;
+    }
+
+    div#ingredientes ul{
+        list-style-position: inside;
+        font-size: 1em;
+        columns: 1;
+    }
+
+    div#ingredientes li{
+        margin: 3px;
+    }
+
+    /*Passo a Passo*/
+
+    section#passo-a-passo{
+        height: 500px;
+    }
+
+    div#passo-a-passo h3{
+        font-size: 2em;
+    }
+
+    div#passo-a-passo li{
+        font-size: 1em;
+    }
+
+    /*Imagens*/
+
+    section#receita2 img.mudar{
+        position: absolute;
+        top: 50%;
+        right: 2%;
+        transform: translate(0%, -50%);
+        margin-bottom: 0px;
+    }
+
+    section#receita2 div.mudar{
+        position: absolute;
+        margin-top: 0px;
+        top: 50%;
+        left: 5vw;
+        transform: translate(0%, -50%);
+        width: 41vw;
     }
 }
